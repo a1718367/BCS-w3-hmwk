@@ -1,0 +1,21 @@
+.navbar{
+    background-color: #25221e;
+}
+.container{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    padding: 1em;
+}
+#pwlength{
+    width: 100%;
+}
+.return{
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+#error_no_criteria{
+    margin-left: 1em;
+    color: red;
+}
