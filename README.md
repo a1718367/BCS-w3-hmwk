@@ -17,3 +17,11 @@ THEN the password is either displayed in an alert or written to the page
 
 <ul>
 <li>create validatation for checkbox</li>
+<ul>
+<h4>Pseudo-code</h4>
+<li>user set length via slder</li>
+<li>for loop to generate password till length = pwlength</li>
+<li>if statement to only include user selected criteria</li>
+<li>to select at random selected criteria arrays</li>
+<li>to select at random character in the selected array</li>
+<li>add character to password</li>

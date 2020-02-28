@@ -7,10 +7,6 @@
     <title>Random Password Generator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type ="text/javascript" src="javascript.js">
-    
-    </script>
-
 </head>
 <body>
     <nav class="navbar navbar-dark">
@@ -21,23 +17,26 @@
     <div class="row">
         <div class="col-lg-8 col-sm-12 mx-auto">
             <h1>Random Password Generator</h1>
+            <div class="result-container">
+                <span id="result"></span>
+                
+            </div>
+            
             <div class="criteria">
                 
-                <h4>Select the length of Password</h4>
-                <input type="range" min="8" max="128" name="pwlength" id="pwlength">
-                <label for="pwlength" id="length"></label>
-                <h4>Select character types</h4>
-                <input type="checkbox" id="lowcase" name="checkbox" value="1">
-                <label for="lowcase">Lowercase</label><br>
-                <input type="checkbox" id="upcase" name="checkbox" value="1">
-                <label for="upcase">Uppercase</label><br>
-                <input type="checkbox" id="numeric" name="checkbox" value="1">
-                <label for="numeric">Numeric</label><br>
-                <input type="checkbox" id="spchrt" name="checkbox" value="1">
-                <label for="spchrt">Special Characters</label><br>
-                
-                <button onclick="validate()">Generate</button>
-                
+                <h4>Password Criteria</h4>
+                <label for="length">Password Length</label>
+                <input type="number" id="length" min="8" max="128" value="1">
+                <span id="error_nolength"></span><br>
+                <label for="lowcase">Lowercase</label>
+                <input type="checkbox" id="lowcase" name="checkbox"><br>
+                <label for="upcase">Uppercase</label>
+                <input type="checkbox" id="upcase" name="checkbox"><br>
+                <label for="numeric">Numeric</label>
+                <input type="checkbox" id="numeric" name="checkbox"><br>
+                <label for="symbols">Symbols</label>
+                <input type="checkbox" id="symbols" name="checkbox"><br>
+                <button id="generate" onclick="">Generate</button>
                 <span id="error_no_criteria"></span>
             </div>
     <div class="row return">
@@ -57,6 +56,6 @@
 
 
 </main>
-
+<script type ="text/javascript" src="javascript.js"></script>
 </body>
 </html>
