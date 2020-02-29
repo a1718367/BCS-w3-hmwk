@@ -17,13 +17,11 @@
     <div class="row">
         <div class="col-lg-8 col-sm-12 mx-auto">
             <h1>Random Password Generator</h1>
-            <div class="result-container">
-                <span id="result"></span>
-                
-            </div>
-            
-            <div class="criteria">
-                
+            <div class="container result-container" id="result">Generated Password</div>
+        
+        <div class="row">
+            <div class="criteria col-lg-6 col-sm-12">
+                <div class="container">
                 <h4>Password Criteria</h4>
                 <label for="length">Password Length</label>
                 <input type="number" id="length" min="8" max="128" value="1">
@@ -36,26 +34,30 @@
                 <input type="checkbox" id="numeric" name="checkbox"><br>
                 <label for="symbols">Symbols</label>
                 <input type="checkbox" id="symbols" name="checkbox"><br>
-                <button id="generate" onclick="">Generate</button>
+                <button id="generate" onclick="generate()">Generate</button>
                 <span id="error_no_criteria"></span>
+                </div>
             </div>
-    <div class="row return">
-        <div class="col-lg-6 col-sm-6">
-            <h4>Generated Password</h4>
-            <div id="display"></div>
-            <button onclick="">Copy to Clipboard</button>
-        </div>
-        <div class="col-lg-6 col-sm-6">
-            <h4>Previous Generated Password</h4>
-            <div id="lastpw"></div>
-        </div>
 
-    </div>
+            <div class="criteria col-lg-6 col-sm-12">
+                <div class="container">
+                <h5>Previous Generated Password</h5>
+                <div class="pgpwd" id="display"></div>
+                </div>
+            </div>
 
-        
+        </div>
+            
 
 
 </main>
 <script type ="text/javascript" src="javascript.js"></script>
 </body>
+<footer class="container-fluid">
+    <div class="clearfix">
+        <span class="float-right">&copy;PSO Co. 2020</span>
+
+    </div>
+    
+</footer>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Scratch</title>
     
 </head>
 <body>
@@ -12,6 +12,7 @@
     <button id="try" onclick="generate2()">Try2</button>
     <button id="try" onclick="generate3()">Try3</button>
     <button id="try" onclick="generatef()">Try4</button>
+    <div id="display"></div>
     <div class = "criteria">
         <label for="lowcase">Lowercase</label>
         <input type="checkbox" id="lowcase" name="checkbox"><br>
@@ -23,6 +24,7 @@
         <input type="checkbox" id="symbols" name="checkbox"><br>
         </div>
     <div id="result"></div>
+    
 </body>
 
 <script>
@@ -120,7 +122,7 @@ for (var i = 0; i<pwlength; i++){
 result = result + f.charAt(Math.floor(Math.random()*Math.floor(f.length)))
 }
 console.log(f, result, result.length);
-document.getElementById("result").innerHTML += result + "</br>";
+document.getElementById("result").innerHTML = result + "</br>";
 
 }
 

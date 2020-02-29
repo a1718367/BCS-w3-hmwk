@@ -1,17 +1,13 @@
-const length_el = document.getElementById("length");
-const lowcase_el = document.getElementById("lowcase");
-const upcase_el = document.getElementById("upcase");
-const numeric_el = document.getElementById("numeric");
-const symbols_el = document.getElementById("symbols");
-const generate_el = document.getElementById("egenerate");
-const clipboard_el = document.getElementById("clipboard");
+    const pwl = document.getElementById("length");
+    const lowcase = "abcdefghijklmnopqrstuvwxyz";
+    const upcase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numeric = "0123456789";
+    const symbols = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
+    const nlowcase = Array.from(lowcase);
+    const nupcase = Array.from(upcase);
+    const nnumeric = Array.from(numeric);
+    const nsymbols = Array.from(symbols);
 
-const pwlength = +length_el.value;
-
-const lowcase_arr = ["abcdefghijklmnopqrstuvwxyz"];
-const upcase_arr = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-const numeric_arr = ["0123456789"];
-const symbols_arr = ["!#$%&()*+,-./:;<=>?@[\]^_`{|}~"];
 
 function validate(){
     if(length_el.value == "" || length_el.value <=0 || length_el.value > 128){
@@ -20,15 +16,44 @@ function validate(){
         document.getElementById("error_nolength").innerHTML = "";
     }
 }
-console.log(lowcase_el.value);
 
-function pwgenerate(){
+function generate(){
+    const pwl = document.getElementById("length");
+    const cblowcase = document.getElementById("lowcase");
+    const cbupcase = document.getElementById("upcase");
+    const cbnumeric = document.getElementById("numeric");
+    const cbsymbols = document.getElementById("symbols");
+    if (cblowcase.checked == true){
+        arr1 = lowcase;
+    } else {
+        arr1 = "";
+    }
 
-let pwresult = ""
+    if (cbupcase.checked == true){
+        arr2 = upcase;
+    } else {
+        arr2 = "";
+    }
+    if (cbnumeric.checked == true){
+        arr3 = numeric;
+    } else {
+        arr3 = "";
+    }
+    if (cbsymbols.checked == true){
+        arr4 = symbols;
+    } else {
+        arr4 = "";
+    }
+    console.log(arr1,arr2,arr3,arr4)
+    f = arr1 + arr2 + arr3 + arr4;
 
+var result = "";
+let pwlength = +pwl.value;
 for (var i = 0; i<pwlength; i++){
-pwresult = pwresult + lowcase_arr[Math.floor(Math.random() * Math.floor(lowcase_arr-1))];
+result = result + f.charAt(Math.floor(Math.random()*Math.floor(f.length)))
 }
+console.log(f, result, result.length);
+document.getElementById("result").innerHTML = result;
+document.getElementById("display").innerHTML += result + "</br>";
 
-console.log(pwresult);
 }
