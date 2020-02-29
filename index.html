@@ -25,21 +25,19 @@
                 <h4>Password Criteria</h4>
                 <label for="length">Password Length</label>
                 <input type="number" id="length" min="8" max="128" value="8">
-                <div class = "err_msg">
-                    <span id="err_length"></span>
-                    <span id="err_criteria"></span>
-
+                <div class = "checkbox">
+                    <label for="lowcase">Lowercase</label>
+                    <input type="checkbox" id="lowcase" name="checkbox"><br>
+                    <label for="upcase">Uppercase</label>
+                    <input type="checkbox" id="upcase" name="checkbox"><br>
+                    <label for="numeric">Numeric</label>
+                    <input type="checkbox" id="numeric" name="checkbox"><br>
+                    <label for="symbols">Symbols</label>
+                    <input type="checkbox" id="symbols" name="checkbox"><br>                    
+                    
                 </div>
-        
-                <label for="lowcase">Lowercase</label>
-                <input type="checkbox" id="lowcase" name="checkbox"><br>
-                <label for="upcase">Uppercase</label>
-                <input type="checkbox" id="upcase" name="checkbox"><br>
-                <label for="numeric">Numeric</label>
-                <input type="checkbox" id="numeric" name="checkbox"><br>
-                <label for="symbols">Symbols</label>
-                <input type="checkbox" id="symbols" name="checkbox"><br>
-                <button id="generate" onclick="initiate()">Generate</button>
+
+                <button class="btn btn-dark" id="generate" onclick="initiate()">Generate</button>
                 
                 </div>
             </div>

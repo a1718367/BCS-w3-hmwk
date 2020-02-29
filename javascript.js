@@ -18,7 +18,7 @@ function initiate(){
         document.getElementById("result").style.color = "red";
         return;
     }else{
-        document.getElementById("err_length").innerHTML = "";
+        document.getElementById("result").innerHTML = "";
         generate();
     }
 }
