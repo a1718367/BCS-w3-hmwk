@@ -27,10 +27,11 @@
 .pgpwd{
     font-size: 15px;
     overflow-wrap: break-word;
+
 }
-.err_msg{
-    font-size: 12px;
-    color: red;
+#pwl-old{
+    color: purple;
+    font-weight: bold;
 }
 footer{
     position:fixed;
