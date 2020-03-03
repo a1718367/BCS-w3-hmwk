@@ -5,7 +5,7 @@ window.onload = function(){document.getElementById("length").focus()};
     const lowcase = "abcdefghijklmnopqrstuvwxyz";
     const upcase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numeric = "0123456789";
-    const symbols = "!#$%&()*+,-./:;=>?@[\]^_{|}~";
+    const symbols = "!#$%&()*+,-./:;<=>?@[\]^_'{|}~";
     const nlowcase = Array.from(lowcase);
     const nupcase = Array.from(upcase);
     const nnumeric = Array.from(numeric);
@@ -66,9 +66,9 @@ if(f.length == 0){
     for (var i = 0; i<pwlength; i++){
     result = result + f.charAt(Math.floor(Math.random()*Math.floor(f.length)))
 }
-    console.log(f, result, result.length);
+    console.log(result, result.length);
     document.getElementById("result").style.color = "black";
-    document.getElementById("result").innerHTML = result;
+    document.getElementById("result").innerText = result;
     document.getElementById("display").innerHTML += result.length + "</br> " + result + "</br>";
     }
 }
