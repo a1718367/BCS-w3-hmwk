@@ -49,7 +49,7 @@ function generate(arr1, length){
         for(i=0; i<length; i++){
         pw = pw + arr1[Math.floor(Math.random()*Math.floor(arr1.length))]; 
     }
-    console.log(pw, "length: ", pw.length)
+    console.log(pw, "length: ", pw.length,typeof pw)
     return pw;
     
 }
