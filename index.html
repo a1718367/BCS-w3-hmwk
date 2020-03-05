@@ -13,14 +13,15 @@
         <div class="navbar-brand">Password Generator</div>
 
     </nav>
-<main class="container">
+    <main class="container">
     <div class="row">
-        <div class="col-lg-8 col-sm-12 mx-auto">
+        <div class="col-lg-12 col-sm-12">
             <h1>Random Password Generator</h1>
             <div class="container result-container" id="result">Your New Password</div>
-        
+        </div>
+    </div>
         <div class="row">
-            <div class="criteria col-lg-5 col-sm-12">
+            <div class="col-lg-5 col-sm-12">
                 <div class="container">
                 <h4>Password Criteria</h4>
                 <label for="length">Password Length</label>
@@ -36,13 +37,11 @@
                     <input type="checkbox" id="symbols" name="checkbox"><br>                    
                     
                 </div>
-
                 <button class="btn btn-dark" id="generate" onclick="initiate()">Generate</button>
-                
                 </div>
             </div>
 
-            <div class="criteria col-lg-7 col-sm-12">
+            <div class="col-lg-7 col-sm-12">
                 <div class="container">
                 <h5>Previous Generated Password</h5>
                 <div class="pgpwd" id="display"></div>
@@ -53,14 +52,12 @@
             
 
 
-</main>
+    </main>
 <script type ="text/javascript" src="script4.js"></script>
 </body>
 <footer class="container-fluid">
     <div class="clearfix">
         <span class="float-right">&copy;PSO Co. 2020</span>
-
-    </div>
-    
+    </div>  
 </footer>
 </html>

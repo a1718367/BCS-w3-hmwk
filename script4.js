@@ -77,6 +77,9 @@ function generate(arr1, length){
 //append generated password to display
 function display(pw){
     var disp = document.createElement("div");
+    var br = document.createElement("div");
     disp.textContent = pw.length + "  " + pw;
+    br.innerHTML = "</br>"
     document.getElementById("display").appendChild(disp)
+    disp.appendChild(br);
 }
