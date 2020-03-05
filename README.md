@@ -15,10 +15,15 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
-<h4>Pseudo-code</h4>
-<li>user set length via slder</li>
-<li>for loop to generate password till length = pwlength</li>
-<li>if statement to only include user selected criteria</li>
-<li>to select at random selected criteria arrays</li>
-<li>to select at random character in the selected array</li>
-<li>add character to password</li>
+<h4>User's guide</h4>
+<li>User input password length
+    <li>must be number</li>
+    <li>must be between 8 and 128</li>
+    <li>cannot be blank</li>
+    </li>
+<li>User select at least 1 criteria</li>
+<li>User prompted if conditions is not met</li>
+<li>Press generate button to generate password</li>
+<li>Password is shown in result box</li>
+<li>Previous generated password is shown in previous password display</li>
+<li>Previous generated password is listed as length + pw</li>

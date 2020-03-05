@@ -13,13 +13,13 @@ iarr = [arr_l,arr_u,arr_n,arr_s];
 
 // js logic
 
-
-
-// chcked chbx => var = arr.object
-// combine var to create selected arr
-// generate pw using selected arr
+// check checkbox status for value == true;
+// combine checked array to create user selected array;
+// generate pw using selected array;
 
 function initiate(){
+
+//declare variables
 
     var n = document.getElementById("length").value;
     var a = document.getElementById("lowcase").checked;
@@ -31,9 +31,9 @@ function initiate(){
 
 // input validation
     // validate length input >= 8; <= 128; is number; != ""
-    // prompt user for input
+    // else if prompt user for input
     // check for chbx status
-    // must have at least one selected
+    // prompt to have at least one selected
 
     if(isNaN(n) || n < 8 || n > 128){
     document.getElementById("result").innerHTML = "Enter a number between 8 and 128 inclusive"
@@ -74,7 +74,7 @@ function generate(arr1, length){
     return pw;
     
 }
-//append generated password to display
+//append generated password to display with appended break inbetween
 function display(pw){
     var disp = document.createElement("div");
     var br = document.createElement("div");
